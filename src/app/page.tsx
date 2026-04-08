@@ -1,24 +1,22 @@
 import Link from "next/link";
 
-const CONTAINER = "max-w-4xl mx-auto px-8 sm:px-12 md:px-16";
-
 export default function Home() {
   return (
     <div>
       {/* Hero */}
-      <section className="py-16 sm:py-24">
-        <div className={CONTAINER}>
+      <section className="min-h-[80vh] flex items-center justify-center">
+        <div className="w-full max-w-[1000px] mx-auto px-10 sm:px-16 py-20 sm:py-28 text-center">
           <p className="text-[11px] font-bold tracking-[0.3em] uppercase text-[var(--cg-gray-700)] mb-8">
             Common Ground Academy
           </p>
-          <h1 className="text-[clamp(44px,8vw,110px)] font-black tracking-[-0.06em] leading-[0.85] uppercase text-[var(--cg-black)]">
+          <h1 className="text-[clamp(48px,9vw,130px)] font-black tracking-[-0.06em] leading-[0.85] uppercase text-[var(--cg-black)]">
             90-DAY<br />AI MASTERY
           </h1>
-          <p className="mt-8 text-[16px] font-normal text-[var(--cg-gray-700)] max-w-lg leading-[1.7]">
+          <p className="mt-8 text-[16px] font-normal text-[var(--cg-gray-700)] max-w-lg mx-auto leading-[1.7]">
             From &ldquo;what the hell is an LLM&rdquo; to certified, automation-building
             AI practitioner. No degree required. No bullshit.
           </p>
-          <div className="mt-10 flex flex-row gap-4 flex-wrap">
+          <div className="mt-10 flex flex-row gap-4 flex-wrap justify-center">
             <Link
               href="/dashboard"
               className="inline-block text-[11px] font-semibold tracking-[0.15em] uppercase px-10 py-4 bg-[var(--cg-black)] text-[var(--cg-white)] border-2 border-[var(--cg-black)] hover:bg-[var(--cg-gray-800)] transition-colors text-center"
@@ -37,7 +35,7 @@ export default function Home() {
 
       {/* Stats Bar */}
       <section className="bg-[var(--cg-black)] py-16 sm:py-20">
-        <div className={CONTAINER + " grid grid-cols-2 md:grid-cols-4 gap-10 text-center"}>
+        <div className="max-w-[1000px] mx-auto px-10 sm:px-16 grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
           {[
             { num: "12", label: "Weeks" },
             { num: "8+", label: "Free Certifications" },
@@ -57,17 +55,17 @@ export default function Home() {
       </section>
 
       {/* Phases */}
-      <section className="py-16 sm:py-24">
-        <div className={CONTAINER}>
+      <section className="py-20 sm:py-28">
+        <div className="max-w-[1000px] mx-auto px-10 sm:px-16 text-center">
           <p className="text-[11px] font-bold tracking-[0.3em] uppercase text-[var(--cg-gray-700)] mb-4">
             The Plan
           </p>
-          <h2 className="text-[clamp(24px,4.5vw,44px)] font-extrabold tracking-[-0.04em] uppercase leading-tight mb-12">
+          <h2 className="text-[clamp(24px,4.5vw,48px)] font-extrabold tracking-[-0.04em] uppercase leading-tight mb-14">
             Four Phases.<br />
             <span className="text-[var(--cg-gray-300)]">Zero Filler.</span>
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-5">
+          <div className="grid md:grid-cols-2 gap-5 text-left">
             {[
               {
                 phase: "01",
@@ -114,7 +112,7 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="mt-14 text-center">
+          <div className="mt-14">
             <Link
               href="/dashboard"
               className="inline-block text-[11px] font-semibold tracking-[0.15em] uppercase px-12 py-4 bg-[var(--cg-black)] text-[var(--cg-white)] border-2 border-[var(--cg-black)] hover:bg-[var(--cg-gray-800)] transition-colors"
@@ -126,8 +124,8 @@ export default function Home() {
       </section>
 
       {/* Bottom Statement */}
-      <section className="bg-[var(--cg-gray-100)] py-20 sm:py-24">
-        <div className="max-w-3xl mx-auto px-8 sm:px-12 md:px-16 text-center">
+      <section className="bg-[var(--cg-gray-100)] py-20 sm:py-28">
+        <div className="max-w-[800px] mx-auto px-10 sm:px-16 text-center">
           <p className="text-[clamp(18px,3.5vw,30px)] font-extrabold tracking-[-0.03em] uppercase leading-tight">
             A degree takes 4 years and costs $50K.{" "}
             <span className="text-[var(--cg-gray-300)]">

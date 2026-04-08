@@ -104,7 +104,7 @@ export default function LessonPage({
   ];
 
   return (
-    <div className="max-w-3xl mx-auto px-8 sm:px-12 py-12">
+    <div className="max-w-[800px] mx-auto px-10 sm:px-16 py-12">
       {/* Breadcrumb */}
       <div className="flex items-center gap-2 text-[10px] font-semibold tracking-[0.1em] uppercase text-[var(--cg-gray-500)] mb-8">
         <Link href="/dashboard" className="hover:text-[var(--cg-black)]">

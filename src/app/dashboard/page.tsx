@@ -32,7 +32,7 @@ export default function Dashboard() {
   });
 
   return (
-    <div className="px-8 sm:px-12 lg:px-20 py-12 max-w-5xl mx-auto">
+    <div className="max-w-[1000px] mx-auto px-10 sm:px-16 py-12">
       {/* Header */}
       <div className="mb-12">
         <p className="text-[11px] font-bold tracking-[0.3em] uppercase text-[var(--cg-gray-700)] mb-2">
