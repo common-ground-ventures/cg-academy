@@ -8,6 +8,7 @@ import {
   updateLessonProgress,
   type LessonProgress,
 } from "@/lib/progress";
+import Confetti from "@/components/Confetti";
 
 export default function LessonPage({
   params,
@@ -27,6 +28,8 @@ export default function LessonPage({
   const [savedProgress, setSavedProgress] = useState<LessonProgress | null>(
     null
   );
+  const [showConfetti, setShowConfetti] = useState(false);
+  const [floatingEmojis, setFloatingEmojis] = useState<{ id: number; emoji: string; x: number; delay: number }[]>([]);
 
   useEffect(() => {
     setMounted(true);
@@ -77,6 +80,9 @@ export default function LessonPage({
     setSubmitted(true);
     const updated = updateLessonProgress(lesson.id, pct, answers);
     setSavedProgress(updated.lessonsProgress[lesson.id]);
+    if (pct >= 70) {
+      setTimeout(() => launchCelebration(), 300);
+    }
   }
 
   function retakeQuiz() {
@@ -88,12 +94,34 @@ export default function LessonPage({
   const allAnswered = lesson.quiz.every((q) => answers[q.id] !== undefined);
   const passed = score !== null && score >= 70;
 
+  const celebrationEmojis = ["🌈", "🦄", "👷", "🫃", "💅", "✨", "🏳️‍🌈", "💃", "🪩", "🍑", "👑", "🎀", "🦩", "🌸"];
+
+  function launchCelebration() {
+    setShowConfetti(true);
+    const emojis: typeof floatingEmojis = [];
+    for (let i = 0; i < 20; i++) {
+      emojis.push({
+        id: i,
+        emoji: celebrationEmojis[Math.floor(Math.random() * celebrationEmojis.length)],
+        x: 10 + Math.random() * 80,
+        delay: Math.random() * 2,
+      });
+    }
+    setFloatingEmojis(emojis);
+    setTimeout(() => {
+      setShowConfetti(false);
+      setFloatingEmojis([]);
+    }, 5000);
+  }
+
   const encouragements = [
-    "Not bad for a guy who didn't know what LLM stood for a few weeks ago.",
-    "Look at you, actually learning shit. Keep going.",
-    "Damn, you're picking this up faster than most tech bros. Don't tell them I said that.",
-    "Armstrong Construction didn't teach you THIS, did they?",
-    "Your future self is going to buy your present self a beer for this.",
+    "Not bad for a guy who didn't know what LLM stood for a few weeks ago. 🦄",
+    "Look at you, actually learning shit. Keep going. 💅✨",
+    "Damn, you're picking this up faster than most tech bros. Don't tell them I said that. 🌈",
+    "Armstrong Construction didn't teach you THIS, did they? 👷🏳️‍🌈",
+    "Your future self is going to buy your present self a beer for this. 🍑🪩",
+    "Slay, king. Absolute slay. 👑💃",
+    "You're giving... main character energy right now. 🦩✨",
   ];
 
   const failMessages = [
@@ -105,6 +133,7 @@ export default function LessonPage({
 
   return (
     <div className="max-w-[1100px] mx-auto px-[40px] py-[clamp(40px,6vw,48px)]">
+      <Confetti active={showConfetti} />
       {/* Breadcrumb */}
       <div className="flex items-center gap-2 text-[10px] font-semibold tracking-[0.1em] uppercase text-[var(--cg-gray-500)] mb-8">
         <Link href="/dashboard" className="hover:text-[var(--cg-black)]">
@@ -296,18 +325,34 @@ export default function LessonPage({
                 )}
               </div>
             ) : (
-              <div className="mt-10 text-center border-t border-[var(--cg-gray-100)] pt-8">
+              <div className="mt-10 text-center border-t border-[var(--cg-gray-100)] pt-8 relative">
+                {/* Floating emojis */}
+                {floatingEmojis.map((e) => (
+                  <div
+                    key={e.id}
+                    className="absolute pointer-events-none text-[28px]"
+                    style={{
+                      left: `${e.x}%`,
+                      bottom: "20%",
+                      animation: `emoji-float 2.5s ease-out ${e.delay}s forwards`,
+                      opacity: 0,
+                    }}
+                  >
+                    {e.emoji}
+                  </div>
+                ))}
+
                 <div
-                  className={`w-28 h-28 rounded-full border-[6px] flex items-center justify-center mx-auto mb-4 ${
+                  className={`celebration-score w-28 h-28 rounded-full border-[6px] flex items-center justify-center mx-auto mb-4 ${
                     passed
-                      ? "border-[var(--cg-black)]"
+                      ? "rainbow-border"
                       : "border-[#8b2020]"
                   }`}
                 >
-                  <span className="text-[32px] font-black">{score}%</span>
+                  <span className={`text-[32px] font-black ${passed ? "rainbow-text" : ""}`}>{score}%</span>
                 </div>
-                <p className="text-[16px] font-bold uppercase tracking-wider mb-2">
-                  {passed ? "Passed" : "Not Quite"}
+                <p className={`text-[16px] font-bold uppercase tracking-wider mb-2 ${passed ? "rainbow-text" : ""}`}>
+                  {passed ? "YAAAS QUEEN 👑" : "Not Quite"}
                 </p>
                 <p className="text-[13px] text-[var(--cg-gray-500)] max-w-md mx-auto mb-6">
                   {passed

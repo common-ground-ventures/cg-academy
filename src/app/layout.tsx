@@ -8,12 +8,27 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://cg-academy.vercel.app"),
   title: "CG Academy | 90-Day AI Mastery",
   description: "Brandon Ronning's 90-Day AI Mastery Plan. Built by Common Ground.",
   openGraph: {
     title: "CG Academy | 90-Day AI Mastery",
     description: "From zero to certified in 90 days. No degree required.",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "CG Academy - 90-Day AI Mastery",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "CG Academy | 90-Day AI Mastery",
+    description: "From zero to certified in 90 days. No degree required.",
+    images: ["/og-image.png"],
   },
 };
 
