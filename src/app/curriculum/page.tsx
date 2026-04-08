@@ -17,7 +17,7 @@ export default function CurriculumPage() {
   ];
 
   return (
-    <div className="px-6 sm:px-10 lg:px-16 py-12 max-w-5xl mx-auto">
+    <div className="px-8 sm:px-12 lg:px-20 py-12 max-w-5xl mx-auto">
       <p className="text-[11px] font-bold tracking-[0.3em] uppercase text-[var(--cg-gray-500)] mb-2">
         Full Curriculum
       </p>
@@ -25,7 +25,7 @@ export default function CurriculumPage() {
         12 Weeks.{" "}
         <span className="text-[var(--cg-gray-300)]">Zero Filler.</span>
       </h1>
-      <p className="text-[14px] text-[var(--cg-gray-500)] leading-relaxed max-w-2xl mb-12">
+      <p className="text-[14px] text-[var(--cg-gray-700)] leading-relaxed max-w-2xl mb-12">
         Every lesson has real content, practical tasks, and a quiz to prove you
         actually learned something. No hand-holding, no participation trophies.
         Pass the quiz or do it again.

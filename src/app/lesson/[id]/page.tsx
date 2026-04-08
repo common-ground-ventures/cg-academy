@@ -104,7 +104,7 @@ export default function LessonPage({
   ];
 
   return (
-    <div className="max-w-3xl mx-auto px-6 sm:px-10 py-12">
+    <div className="max-w-3xl mx-auto px-8 sm:px-12 py-12">
       {/* Breadcrumb */}
       <div className="flex items-center gap-2 text-[10px] font-semibold tracking-[0.1em] uppercase text-[var(--cg-gray-500)] mb-8">
         <Link href="/dashboard" className="hover:text-[var(--cg-black)]">
@@ -124,7 +124,7 @@ export default function LessonPage({
         <h1 className="text-[clamp(24px,5vw,40px)] font-extrabold tracking-[-0.03em] uppercase">
           {lesson.title}
         </h1>
-        <p className="text-[14px] text-[var(--cg-gray-500)] mt-2">
+        <p className="text-[14px] text-[var(--cg-gray-700)] mt-2">
           {lesson.subtitle}
         </p>
         {mounted && savedProgress?.completed && (
@@ -139,7 +139,7 @@ export default function LessonPage({
         {lesson.content.map((paragraph, i) => (
           <p
             key={i}
-            className="text-[15px] leading-relaxed text-[var(--cg-gray-700)] whitespace-pre-line"
+            className="text-[15px] leading-relaxed text-[var(--cg-black)] whitespace-pre-line"
           >
             {paragraph}
           </p>
