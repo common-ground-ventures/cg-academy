@@ -27,7 +27,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col antialiased">
         {/* Header */}
         <header className="fixed top-0 left-0 right-0 z-50 bg-[var(--cg-white)]/95 backdrop-blur-sm">
-          <div className="flex justify-between items-center px-6 sm:px-10 py-5 border-b border-[var(--cg-gray-100)]">
+          <div className="flex justify-between items-center px-8 sm:px-12 md:px-16 py-5 border-b border-[var(--cg-gray-100)]">
             <a href="/" className="flex items-center gap-3">
               <span className="text-[11px] font-bold tracking-[0.3em] uppercase text-[var(--cg-black)]">
                 CG ACADEMY
@@ -57,7 +57,7 @@ export default function RootLayout({
         <main className="flex-1 pt-[65px]">{children}</main>
 
         {/* Footer */}
-        <footer className="border-t border-[var(--cg-gray-100)] px-6 sm:px-10 py-8">
+        <footer className="border-t border-[var(--cg-gray-100)] px-8 sm:px-12 md:px-16 py-10">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4 max-w-6xl mx-auto">
             <div className="flex flex-col items-center sm:items-start gap-1">
               <span className="text-[11px] font-bold tracking-[0.2em] uppercase text-[var(--cg-gray-500)]">

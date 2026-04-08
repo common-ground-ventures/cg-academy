@@ -1,39 +1,43 @@
 import Link from "next/link";
 
+const CONTAINER = "max-w-4xl mx-auto px-8 sm:px-12 md:px-16";
+
 export default function Home() {
   return (
     <div>
       {/* Hero */}
-      <section className="px-8 sm:px-12 lg:px-20 pt-16 pb-20">
-        <p className="text-[11px] font-bold tracking-[0.3em] uppercase text-[var(--cg-gray-700)] mb-6">
-          Common Ground Academy
-        </p>
-        <h1 className="text-[clamp(52px,10vw,140px)] font-black tracking-[-0.06em] leading-[0.85] uppercase text-[var(--cg-black)]">
-          90-DAY<br />AI MASTERY
-        </h1>
-        <p className="mt-6 text-[16px] font-normal text-[var(--cg-gray-700)] max-w-xl leading-relaxed">
-          From &ldquo;what the hell is an LLM&rdquo; to certified, automation-building
-          AI practitioner. No degree required. No bullshit.
-        </p>
-        <div className="mt-8 flex flex-row gap-4 flex-wrap">
-          <Link
-            href="/dashboard"
-            className="inline-block text-[11px] font-semibold tracking-[0.15em] uppercase px-10 py-4 bg-[var(--cg-black)] text-[var(--cg-white)] border-2 border-[var(--cg-black)] hover:bg-[var(--cg-gray-800)] transition-colors text-center"
-          >
-            Start Learning
-          </Link>
-          <Link
-            href="/curriculum"
-            className="inline-block text-[11px] font-semibold tracking-[0.15em] uppercase px-10 py-4 bg-transparent text-[var(--cg-black)] border-2 border-[var(--cg-black)] hover:bg-[var(--cg-black)] hover:text-[var(--cg-white)] transition-colors text-center"
-          >
-            View Curriculum
-          </Link>
+      <section className="py-16 sm:py-24">
+        <div className={CONTAINER}>
+          <p className="text-[11px] font-bold tracking-[0.3em] uppercase text-[var(--cg-gray-700)] mb-8">
+            Common Ground Academy
+          </p>
+          <h1 className="text-[clamp(44px,8vw,110px)] font-black tracking-[-0.06em] leading-[0.85] uppercase text-[var(--cg-black)]">
+            90-DAY<br />AI MASTERY
+          </h1>
+          <p className="mt-8 text-[16px] font-normal text-[var(--cg-gray-700)] max-w-lg leading-[1.7]">
+            From &ldquo;what the hell is an LLM&rdquo; to certified, automation-building
+            AI practitioner. No degree required. No bullshit.
+          </p>
+          <div className="mt-10 flex flex-row gap-4 flex-wrap">
+            <Link
+              href="/dashboard"
+              className="inline-block text-[11px] font-semibold tracking-[0.15em] uppercase px-10 py-4 bg-[var(--cg-black)] text-[var(--cg-white)] border-2 border-[var(--cg-black)] hover:bg-[var(--cg-gray-800)] transition-colors text-center"
+            >
+              Start Learning
+            </Link>
+            <Link
+              href="/curriculum"
+              className="inline-block text-[11px] font-semibold tracking-[0.15em] uppercase px-10 py-4 bg-transparent text-[var(--cg-black)] border-2 border-[var(--cg-black)] hover:bg-[var(--cg-black)] hover:text-[var(--cg-white)] transition-colors text-center"
+            >
+              View Curriculum
+            </Link>
+          </div>
         </div>
       </section>
 
       {/* Stats Bar */}
-      <section className="bg-[var(--cg-black)] px-8 sm:px-12 py-14">
-        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <section className="bg-[var(--cg-black)] py-16 sm:py-20">
+        <div className={CONTAINER + " grid grid-cols-2 md:grid-cols-4 gap-10 text-center"}>
           {[
             { num: "12", label: "Weeks" },
             { num: "8+", label: "Free Certifications" },
@@ -41,7 +45,7 @@ export default function Home() {
             { num: "90%", label: "Percentile Target" },
           ].map((stat) => (
             <div key={stat.label}>
-              <div className="text-[clamp(32px,5vw,52px)] font-black text-[var(--cg-white)] tracking-tight">
+              <div className="text-[clamp(30px,5vw,48px)] font-black text-[var(--cg-white)] tracking-tight">
                 {stat.num}
               </div>
               <div className="text-[10px] font-semibold tracking-[0.2em] uppercase text-[var(--cg-gray-500)] mt-2">
@@ -53,84 +57,88 @@ export default function Home() {
       </section>
 
       {/* Phases */}
-      <section className="px-8 sm:px-12 lg:px-20 py-16 max-w-6xl mx-auto">
-        <p className="text-[11px] font-bold tracking-[0.3em] uppercase text-[var(--cg-gray-700)] mb-4">
-          The Plan
-        </p>
-        <h2 className="text-[clamp(26px,5vw,48px)] font-extrabold tracking-[-0.04em] uppercase leading-tight mb-10">
-          Four Phases.<br />
-          <span className="text-[var(--cg-gray-300)]">Zero Filler.</span>
-        </h2>
+      <section className="py-16 sm:py-24">
+        <div className={CONTAINER}>
+          <p className="text-[11px] font-bold tracking-[0.3em] uppercase text-[var(--cg-gray-700)] mb-4">
+            The Plan
+          </p>
+          <h2 className="text-[clamp(24px,4.5vw,44px)] font-extrabold tracking-[-0.04em] uppercase leading-tight mb-12">
+            Four Phases.<br />
+            <span className="text-[var(--cg-gray-300)]">Zero Filler.</span>
+          </h2>
 
-        <div className="grid md:grid-cols-2 gap-4">
-          {[
-            {
-              phase: "01",
-              title: "Foundations",
-              weeks: "Weeks 1-3",
-              desc: "What AI is, how to use it, your first certifications. Go from zero to competent.",
-            },
-            {
-              phase: "02",
-              title: "Applied Skills",
-              weeks: "Weeks 4-6",
-              desc: "AI for business, automation fundamentals, advanced prompting. Start making money with this.",
-            },
-            {
-              phase: "03",
-              title: "Automation & Business",
-              weeks: "Weeks 7-9",
-              desc: "Build systems, think strategically, create custom AI assistants. Become dangerous.",
-            },
-            {
-              phase: "04",
-              title: "Certification & Mastery",
-              weeks: "Weeks 10-12",
-              desc: "Paid certifications, portfolio, future planning. Prove what you know.",
-            },
-          ].map((p) => (
-            <div
-              key={p.phase}
-              className="border border-[var(--cg-gray-100)] p-7 hover:border-[var(--cg-gray-300)] transition-colors"
+          <div className="grid md:grid-cols-2 gap-5">
+            {[
+              {
+                phase: "01",
+                title: "Foundations",
+                weeks: "Weeks 1-3",
+                desc: "What AI is, how to use it, your first certifications. Go from zero to competent.",
+              },
+              {
+                phase: "02",
+                title: "Applied Skills",
+                weeks: "Weeks 4-6",
+                desc: "AI for business, automation fundamentals, advanced prompting. Start making money with this.",
+              },
+              {
+                phase: "03",
+                title: "Automation & Business",
+                weeks: "Weeks 7-9",
+                desc: "Build systems, think strategically, create custom AI assistants. Become dangerous.",
+              },
+              {
+                phase: "04",
+                title: "Certification & Mastery",
+                weeks: "Weeks 10-12",
+                desc: "Paid certifications, portfolio, future planning. Prove what you know.",
+              },
+            ].map((p) => (
+              <div
+                key={p.phase}
+                className="border border-[var(--cg-gray-100)] p-8 hover:border-[var(--cg-gray-300)] transition-colors"
+              >
+                <span className="text-[36px] font-black text-[var(--cg-gray-100)]">
+                  {p.phase}
+                </span>
+                <h3 className="text-[15px] font-bold uppercase tracking-wider mt-2">
+                  {p.title}
+                </h3>
+                <p className="text-[10px] font-semibold tracking-[0.15em] uppercase text-[var(--cg-gray-700)] mt-1">
+                  {p.weeks}
+                </p>
+                <p className="text-[14px] text-[var(--cg-black)] leading-relaxed mt-4">
+                  {p.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-14 text-center">
+            <Link
+              href="/dashboard"
+              className="inline-block text-[11px] font-semibold tracking-[0.15em] uppercase px-12 py-4 bg-[var(--cg-black)] text-[var(--cg-white)] border-2 border-[var(--cg-black)] hover:bg-[var(--cg-gray-800)] transition-colors"
             >
-              <span className="text-[36px] font-black text-[var(--cg-gray-100)]">
-                {p.phase}
-              </span>
-              <h3 className="text-[15px] font-bold uppercase tracking-wider mt-1">
-                {p.title}
-              </h3>
-              <p className="text-[10px] font-semibold tracking-[0.15em] uppercase text-[var(--cg-gray-700)] mt-1">
-                {p.weeks}
-              </p>
-              <p className="text-[14px] text-[var(--cg-black)] leading-relaxed mt-3">
-                {p.desc}
-              </p>
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-12 text-center">
-          <Link
-            href="/dashboard"
-            className="inline-block text-[11px] font-semibold tracking-[0.15em] uppercase px-12 py-4 bg-[var(--cg-black)] text-[var(--cg-white)] border-2 border-[var(--cg-black)] hover:bg-[var(--cg-gray-800)] transition-colors"
-          >
-            Let&apos;s Go
-          </Link>
+              Let&apos;s Go
+            </Link>
+          </div>
         </div>
       </section>
 
       {/* Bottom Statement */}
-      <section className="bg-[var(--cg-gray-100)] px-8 sm:px-12 py-16 text-center">
-        <p className="text-[clamp(18px,4vw,34px)] font-extrabold tracking-[-0.03em] uppercase leading-tight max-w-3xl mx-auto">
-          A degree takes 4 years and costs $50K.{" "}
-          <span className="text-[var(--cg-gray-300)]">
-            This takes 90 days and costs $150.
-          </span>
-        </p>
-        <p className="text-[14px] text-[var(--cg-gray-700)] mt-5 max-w-xl mx-auto leading-relaxed">
-          No classroom. No professor reading slides. Just you, the tools, and a
-          plan designed by people who actually use this stuff every day.
-        </p>
+      <section className="bg-[var(--cg-gray-100)] py-20 sm:py-24">
+        <div className="max-w-3xl mx-auto px-8 sm:px-12 md:px-16 text-center">
+          <p className="text-[clamp(18px,3.5vw,30px)] font-extrabold tracking-[-0.03em] uppercase leading-tight">
+            A degree takes 4 years and costs $50K.{" "}
+            <span className="text-[var(--cg-gray-300)]">
+              This takes 90 days and costs $150.
+            </span>
+          </p>
+          <p className="text-[14px] text-[var(--cg-gray-700)] mt-6 max-w-lg mx-auto leading-[1.7]">
+            No classroom. No professor reading slides. Just you, the tools, and a
+            plan designed by people who actually use this stuff every day.
+          </p>
+        </div>
       </section>
     </div>
   );
