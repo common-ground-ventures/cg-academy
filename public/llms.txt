@@ -1,0 +1,46 @@
+# CG Academy — LLM Context File
+
+> CG Academy is Common Ground's 90-Day AI Mastery program — a 12-week, self-paced curriculum that takes someone from "what the hell is an LLM" to a certified, automation-building AI practitioner. No degree required. Built around 8+ free certifications and roughly $150 in total out-of-pocket investment.
+
+## Key Facts
+
+- Name: CG Academy
+- Parent: Common Ground (commonground.ventures)
+- Program: 90-Day AI Mastery Plan
+- Duration: 12 weeks, self-paced
+- Cost: ~$150 total investment
+- Certifications: 8+ free industry certifications included
+- Target: 90th-percentile proficiency for complete beginners
+- Website: https://cg-academy.vercel.app
+- Curator: Brandon Ronning (Common Ground)
+
+## What Students Get
+
+- Structured 12-week curriculum organized in phases
+- Dashboard for tracking progress through lessons and quizzes
+- Full curriculum view with every module mapped out
+- Lesson content with embedded quizzes
+- Path to 8+ free certifications from major AI / cloud providers
+- Graduation as a certified, automation-building AI practitioner
+
+## Positioning
+
+CG Academy exists because most "AI upskilling" programs are either free and shapeless or paid and bloated. The 90-Day plan is an opinionated path: what to learn, in what order, which certifications to stack, and how to actually ship automations by the end. Built for operators, career-switchers, and small-business teams — not PhDs.
+
+## About Common Ground
+
+Common Ground is the brand / capital / execution firm behind CG Academy. Common Ground works with pre-enterprise operators ($10–100M revenue) on brand architecture, revenue engineering, capital strategy, development, technology, and media. CG Academy is the education arm — how Common Ground trains the next generation of AI-literate operators.
+
+- Parent site: https://commonground.ventures
+
+## Site Pages
+
+- Home: https://cg-academy.vercel.app
+- Dashboard: https://cg-academy.vercel.app/dashboard
+- Curriculum: https://cg-academy.vercel.app/curriculum
+- Lessons: https://cg-academy.vercel.app/lesson
+- Quizzes: https://cg-academy.vercel.app/quiz
+
+## Branding
+
+Created by Common Ground | Enhanced by APEXX AI
