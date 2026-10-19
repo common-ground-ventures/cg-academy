@@ -83,7 +83,9 @@ export default function RootLayout({
               </span>
             </div>
             <span className="text-[8px] text-[var(--cg-gray-300)] tracking-wider">
-              Branded by Lip Loi Creative &nbsp;|&nbsp; Enhanced by APEXX AI
+              <a href="https://www.commonground.ventures/">Created by Common Ground</a>
+              &nbsp;&middot;&nbsp;
+              <a href="/wiki">About this build</a>
             </span>
           </div>
         </footer>

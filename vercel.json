@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/wiki",
+      "destination": "/wiki/index.html"
+    },
+    {
+      "source": "/wiki/common-ground",
+      "destination": "/wiki/common-ground/index.html"
+    }
+  ]
+}
