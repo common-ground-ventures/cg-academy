@@ -1,0 +1,5 @@
+{
+  "note": "Known findings on the day the gate was wired. Each entry is debt to fix, not a permission. Shrink it; never grow it without review.",
+  "export_commit": "7f969682a3f76ec867dc108d7fc2582f4bae9a19",
+  "findings": []
+}
